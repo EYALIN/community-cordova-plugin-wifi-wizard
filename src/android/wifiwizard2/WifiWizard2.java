@@ -2008,12 +2008,12 @@ public class WifiWizard2 extends CordovaPlugin {
         WifiNetworkSpecifier.Builder builder = new WifiNetworkSpecifier.Builder();
         builder.setSsid(SSID);
         
-        if(Algorithm.matches("/WEP|WPA|WPA2/gim") && PASS.length() > 0)
+        if((Algorithm.equalsIgnoreCase("WEP") || Algorithm.equalsIgnoreCase("WPA") || Algorithm.equalsIgnoreCase("WPA2")) && PASS.length() > 0)
         {
           builder.setWpa2Passphrase(PASS);
         }
 
-        if(Algorithm.matches("/WPA3/gim") && !PASS.isEmpty())
+        if(Algorithm.equalsIgnoreCase("WPA3") && !PASS.isEmpty())
         {
           builder.setWpa3Passphrase(PASS);
         }
@@ -2103,11 +2103,11 @@ public class WifiWizard2 extends CordovaPlugin {
             builder.setSsid(SSID);
             builder.setIsAppInteractionRequired(false);
 
-            if (Algorithm.matches("/WEP|WPA|WPA2/gim") && PASS.length() > 0) {
+            if ((Algorithm.equalsIgnoreCase("WEP") || Algorithm.equalsIgnoreCase("WPA") || Algorithm.equalsIgnoreCase("WPA2")) && PASS.length() > 0) {
                 builder.setWpa2Passphrase(PASS);
             }
 
-            if (Algorithm.matches("/WPA3/gim") && !PASS.isEmpty()) {
+            if (Algorithm.equalsIgnoreCase("WPA3") && !PASS.isEmpty()) {
                 builder.setWpa3Passphrase(PASS);
             }
 
