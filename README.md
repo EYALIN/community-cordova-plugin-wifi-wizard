@@ -1,3 +1,22 @@
+> # ⚠️ DEPRECATED — no longer maintained
+>
+> **This plugin has moved.** It is superseded by
+> **[`community-cordova-plugin-wifi`](https://github.com/EYALIN/community-cordova-plugin-wifi)**
+> ([npm](https://www.npmjs.com/package/community-cordova-plugin-wifi)), which is
+> actively maintained and supports modern Android Wi-Fi connection APIs
+> (`WifiNetworkSpecifier`-based connect, etc.).
+>
+> Please migrate:
+>
+> ```sh
+> cordova plugin remove community-cordova-plugin-wifi-wizard
+> cordova plugin add community-cordova-plugin-wifi
+> ```
+>
+> No further fixes, releases, or PR merges will be made in this repository.
+
+---
+
 [![NPM version](https://img.shields.io/npm/v/community-cordova-plugin-wifi-wizard)](https://www.npmjs.com/package/community-cordova-plugin-wifi-wizard)
 [![Downloads](https://img.shields.io/npm/dm/community-cordova-plugin-wifi-wizard)](https://www.npmjs.com/package/community-cordova-plugin-wifi-wizard)
 
